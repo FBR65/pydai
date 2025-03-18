@@ -1,0 +1,14 @@
+[project]
+name = "pydai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckduckgo-search>=7.5.2",
+    "httpx>=0.28.1",
+    "nest-asyncio>=1.6.0",
+    "pydantic>=2.10.6",
+    "pydantic-ai>=0.0.40",
+    "serpapi>=0.1.5",
+]
