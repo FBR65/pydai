@@ -10,5 +10,6 @@ dependencies = [
     "nest-asyncio>=1.6.0",
     "pydantic>=2.10.6",
     "pydantic-ai>=0.0.40",
+    "python-dotenv>=1.0.1",
     "serpapi>=0.1.5",
 ]

@@ -1,11 +1,11 @@
-from pydantic_ai import Agent
-from pydantic_ai.models.openai import OpenAIModel
-from pydantic_ai.providers.openai import OpenAIProvider
+import asyncio
+from koordinator import Koordinator
 
-model = OpenAIModel(
-    model_name='qwen2.5:latest', provider=OpenAIProvider(base_url='http://localhost:11434/v1')
-)
-agent = Agent(model)
+async def main():
+    input_data = "Erkläre den Begriff Maschinelles Lernen in einfachen Worten."
+    koordinator = Koordinator(input_data)
+    markdown = await koordinator.koordiniere()
+    print(markdown)
 
-result = agent.run_sync('When was the first computer bug found?')  
-print(result.data)
+if __name__ == "__main__":
+    asyncio.run(main())
